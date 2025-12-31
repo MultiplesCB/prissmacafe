@@ -1,0 +1,41 @@
+# Archivos y carpetas a ignorar en Git
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos de configuración del editor
+.vscode/
+.idea/
+*.sublime-*
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Node modules (si usas npm en el futuro)
+node_modules/
+
+# Archivos de configuración local
+.env
+.env.local
+
+# Carpetas de build (si generas builds)
+dist/
+build/
+
+# Archivos de backup
+*.bak
+*.backup
+*~
+
+# Archivos grandes que no deben estar en Git
+# (descomenta si tienes videos muy grandes)
+# *.mp4
+# *.mov
+
+# Carpeta de antigravity (artifacts de desarrollo)
+.gemini/

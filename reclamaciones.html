@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro de Reclamaciones | Prissma Café</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/reclamaciones.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body class="bg-light">
+    <!-- Navbar -->
+    <header id="header" style="background-color: var(--primary-color);">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">PRISSMA<span>CAFÉ</span></a>
+            <ul class="nav-list">
+                <li><a href="index.html">Volver al Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container section-padding" style="margin-top: 60px;">
+        <div class="text-center section-header">
+            <h1>Libro de Reclamaciones</h1>
+            <p>Conforme al Código de Protección y Defensa del Consumidor</p>
+            <div class="divider" style="margin: 0 auto 30px;"></div>
+        </div>
+
+        <div
+            style="max-width: 800px; margin: 0 auto; background: var(--bg-white); padding: 40px; border-radius: 12px; box-shadow: var(--shadow-md);">
+
+            <div class="text-center"
+                style="margin-bottom: 30px; border: 1px solid var(--text-muted); padding: 15px; border-radius: 8px;">
+                <p><strong>HOJA DE RECLAMACIÓN VIRTUAL</strong></p>
+                <p>Fecha: <span id="currentDate"></span></p>
+                <p>Nº Reclamación: <strong>[AUTOGENERADO]</strong></p>
+            </div>
+
+            <div class="text-center" style="margin-bottom: 30px;">
+                <p><strong>PRISSMA CAFÉ</strong><br>Razón Social: CECILIO LAZARO ELIA LUISA<br>RUC: 10481413139<br>Jr.
+                    Atahuallpa N° 123, Pucallpa</p>
+            </div>
+
+            <form class="contact-form" style="box-shadow: none; padding: 0;">
+
+                <!-- 1. Identificación del Consumidor -->
+                <h3
+                    style="margin-bottom: 20px; border-bottom: 2px solid var(--bg-light); padding-bottom: 10px; color: var(--primary-color);">
+                    1.
+                    Identificación del consumidor reclamante</h3>
+
+                <div class="grid-2" style="gap: 20px; grid-template-columns: 1fr 1fr 1fr;">
+                    <div class="form-group">
+                        <label for="apellido_paterno">Apellido paterno <span style="color: red;">*</span></label>
+                        <input type="text" id="apellido_paterno" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido_materno">Apellido materno <span style="color: red;">*</span></label>
+                        <input type="text" id="apellido_materno" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombres">Nombres <span style="color: red;">*</span></label>
+                        <input type="text" id="nombres" required>
+                    </div>
+                </div>
+
+                <div class="grid-2" style="gap: 20px; grid-template-columns: 1fr 1fr 1fr;">
+                    <div class="form-group">
+                        <label for="tipo_documento">Tipo de documento <span style="color: red;">*</span></label>
+                        <select id="tipo_documento" required>
+                            <option value="">Seleccionar...</option>
+                            <option value="DNI">DNI</option>
+                            <option value="CE">Carnet de Extranjería</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="numero_documento">Número de documento <span style="color: red;">*</span></label>
+                        <input type="text" id="numero_documento" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono <span style="color: red;">*</span></label>
+                        <input type="tel" id="telefono" required>
+                    </div>
+                </div>
+
+                <div class="grid-2" style="gap: 20px;">
+                    <div class="form-group">
+                        <label for="email">Correo electrónico <span style="color: red;">*</span></label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Dirección completa</label>
+                        <input type="text" id="direccion" placeholder="Calle, número, urbanización, etc.">
+                    </div>
+                </div>
+
+                <div class="grid-2" style="gap: 20px; grid-template-columns: 1fr 1fr 1fr;">
+                    <div class="form-group">
+                        <label for="departamento">Departamento <span style="color: red;">*</span></label>
+                        <select id="departamento" required>
+                            <option value="">Seleccionar...</option>
+                            <option value="Amazonas">Amazonas</option>
+                            <option value="Áncash">Áncash</option>
+                            <option value="Apurímac">Apurímac</option>
+                            <option value="Arequipa">Arequipa</option>
+                            <option value="Ayacucho">Ayacucho</option>
+                            <option value="Cajamarca">Cajamarca</option>
+                            <option value="Cusco">Cusco</option>
+                            <option value="Huancavelica">Huancavelica</option>
+                            <option value="Huánuco">Huánuco</option>
+                            <option value="Ica">Ica</option>
+                            <option value="Junín">Junín</option>
+                            <option value="La Libertad">La Libertad</option>
+                            <option value="Lambayeque">Lambayeque</option>
+                            <option value="Lima">Lima</option>
+                            <option value="Loreto">Loreto</option>
+                            <option value="Madre de Dios">Madre de Dios</option>
+                            <option value="Moquegua">Moquegua</option>
+                            <option value="Pasco">Pasco</option>
+                            <option value="Piura">Piura</option>
+                            <option value="Puno">Puno</option>
+                            <option value="San Martín">San Martín</option>
+                            <option value="Tacna">Tacna</option>
+                            <option value="Tumbes">Tumbes</option>
+                            <option value="Ucayali">Ucayali</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="provincia">Provincia <span style="color: red;">*</span></label>
+                        <select id="provincia" disabled required>
+                            <option value="">Seleccione departamento primero</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="distrito">Distrito <span style="color: red;">*</span></label>
+                        <select id="distrito" disabled required>
+                            <option value="">Seleccione provincia primero</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Guardian for Minors -->
+                <div class="form-group"
+                    style="background: var(--bg-light); padding: 15px; border-radius: 8px; margin-top: 15px;">
+                    <label style="margin-bottom: 10px; font-weight: bold;">Para menores de edad (apoderado):</label>
+                    <div class="grid-2" style="gap: 20px;">
+                        <div>
+                            <label for="padre_madre" style="font-size: 0.9rem;">Nombre del Padre/Madre:</label>
+                            <input type="text" id="padre_madre">
+                        </div>
+                        <div>
+                            <label for="dni_apoderado" style="font-size: 0.9rem;">DNI Apoderado:</label>
+                            <input type="text" id="dni_apoderado">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Identificación del Bien Contratado -->
+                <h3 style="margin: 30px 0 20px; border-bottom: 2px solid var(--bg-light); padding-bottom: 10px;">2.
+                    Identificación del Bien o Servicio Contratado</h3>
+
+                <div class="grid-2" style="gap: 20px;">
+                    <div class="form-group">
+                        <label>Tipo: <span style="color: red;">*</span></label>
+                        <div style="display: flex; gap: 20px; margin-top: 5px;">
+                            <label style="font-weight: normal; display: flex; align-items: center; gap: 8px;">
+                                <input type="radio" name="tipo_bien" value="producto" checked required> Producto
+                            </label>
+                            <label style="font-weight: normal; display: flex; align-items: center; gap: 8px;">
+                                <input type="radio" name="tipo_bien" value="servicio" required> Servicio
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="monto">Monto Reclamado (S/) <span style="color: red;">*</span></label>
+                        <input type="number" id="monto" step="0.01" placeholder="0.00" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion_bien">Descripción del Bien o Servicio <span
+                            style="color: red;">*</span></label>
+                    <textarea id="descripcion_bien" rows="3" placeholder="Ej: Café Americano, Atención en mesa..."
+                        required></textarea>
+                </div>
+
+                <!-- 3. Detalle de la Reclamación -->
+                <h3 style="margin: 30px 0 20px; border-bottom: 2px solid var(--bg-light); padding-bottom: 10px;">3.
+                    Detalle de la Reclamación y Pedido</h3>
+
+                <div class="form-group">
+                    <label>Tipo de Reclamo: <span style="color: red;">*</span></label>
+                    <div style="display: flex; gap: 20px; margin-top: 5px; margin-bottom: 15px; flex-wrap: wrap;">
+                        <label
+                            style="font-weight: normal; display: flex; align-items: flex-start; gap: 8px; max-width: 48%;">
+                            <input type="radio" name="tipo_reclamo" value="reclamo" checked style="margin-top: 5px;"
+                                required>
+                            <span><strong>Reclamo:</strong> Disconformidad relacionada a los productos o
+                                servicios.</span>
+                        </label>
+                        <label
+                            style="font-weight: normal; display: flex; align-items: flex-start; gap: 8px; max-width: 48%;">
+                            <input type="radio" name="tipo_reclamo" value="queja" style="margin-top: 5px;" required>
+                            <span><strong>Queja:</strong> Disconformidad no relacionada a los productos o servicios; o,
+                                malestar o descontento respecto a la atención al público.</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="detalle">Detalle del Reclamo o Queja <span style="color: red;">*</span></label>
+                    <textarea id="detalle" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="pedido">Pedido del Consumidor <span style="color: red;">*</span></label>
+                    <textarea id="pedido" rows="3" placeholder="¿Qué solución espera?" required></textarea>
+                </div>
+
+                <div class="form-group"
+                    style="margin-top: 20px; font-size: 0.9rem; color: var(--text-muted); background: var(--bg-light); padding: 10px; border-radius: 6px;">
+                    <p>* La empresa debe dar respuesta al reclamo en un plazo no mayor a quince (15) días hábiles
+                        improrrogables.</p>
+                </div>
+
+                <div class="form-group" style="display: flex; gap: 10px; align-items: flex-start; margin-top: 20px;">
+                    <input type="checkbox" id="declaracion" required style="width: auto; margin-top: 5px;">
+                    <label for="declaracion" style="font-weight: normal; font-size: 0.9rem;"><span
+                            style="color: red;">*</span> Declaro ser el consumidor y
+                        que los datos consignados son veraces. Acepto que la comunicación de la respuesta se realice al
+                        correo electrónico indicado.</label>
+                </div>
+
+                <div class="text-center" style="margin-top: 30px;">
+                    <button type="submit" class="btn-primary" style="width: 100%; max-width: 300px;">Enviar Hoja de
+                        Reclamación</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 PRISSMA CAFÉ. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/global.js"></script>
+    <script src="js/reclamaciones.js"></script>
+
+</body>
+
+</html>

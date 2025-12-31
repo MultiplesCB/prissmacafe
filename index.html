@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Prissma Café en Pucallpa. Café de especialidad, ambiente acogedor y momentos únicos. Visítanos y disfruta de la mejor experiencia amazónica.">
+    <title>PRISSMA CAFÉ | Pucallpa</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PRISSMA CAFÉ - Café de Especialidad en Pucallpa">
+    <meta property="og:description"
+        content="Café de calidad, momentos únicos en Pucallpa. Ambiente moderno, atención personalizada y los mejores granos de especialidad.">
+    <meta property="og:image" content="https://prissmacafe.com/assets/images/logo.jpg">
+    <meta property="og:url" content="https://prissmacafe.com">
+    <meta property="og:site_name" content="Prissma Café">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PRISSMA CAFÉ - Pucallpa">
+    <meta name="twitter:description" content="Café de calidad, momentos únicos en Pucallpa">
+    <meta name="twitter:image" content="jpghttps://prissmacafe.com/assets/images/logo.">
+
+    <!-- SEO Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Prissma Café",
+      "image": "assets/images/hero_bg.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jr. Callería 540",
+        "addressLocality": "Pucallpa",
+        "addressRegion": "Ucayali",
+        "addressCountry": "PE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -8.379147,
+        "longitude": -74.5562723
+      },
+      "url": "https://www.prissmacafe.com",
+      "telephone": "+51987654321",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "07:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "08:00",
+          "closes": "21:00"
+        }
+      ],
+      "menu": "https://www.prissmacafe.com/#menu",
+      "servesCuisine": "Coffee",
+      "priceRange": "$$"
+    }
+    </script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Icons (Phosphor Icons or similar CDN) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "nBNWAZFpr_vwuIDpA", // Usuario debe reemplazar esto
+            });
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <svg width="60" height="60" viewBox="0 0 32 32" fill="#D4AF37">
+                <path
+                    d="M26 8h-2V6c0-2.2-1.8-4-4-4H6C3.8 2 2 3.8 2 6v12c0 4.4 3.6 8 8 8h6c4.4 0 8-3.6 8-8v-2h2c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM18 24H10c-3.3 0-6-2.7-6-6V6c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v12c0 3.3-2.7 6-6 6zm8-14h-2v-2h2v2z" />
+                <path class="steam" d="M8 0h2v4H8z" />
+                <path class="steam" d="M14 0h2v4h-2z" />
+                <path class="steam" d="M20 0h2v4h-2z" />
+            </svg>
+            <p>Preparando tu experiencia...</p>
+        </div>
+    </div>
+
+    <!-- Particles Container -->
+    <div id="particles-container"></div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+
+    <!-- Navbar -->
+    <header id="header">
+        <nav class="navbar container">
+            <a href="#" class="logo">PRISSMA<span>CAFÉ</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto" class="btn-primary">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <!-- Placeholder for video background. Using image as poster fallback -->
+        <div class="video-overlay"></div>
+        <video autoplay muted loop playsinline poster="assets/images/hero_bg.png" id="hero-video">
+            <!-- You can replace this src with a real local video file 'assets/videos/hero.mp4' later -->
+            <source src="assets/videos/prissma.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+
+        <div class="hero-content container">
+            <h1 class="fade-in">PRISSMA CAFÉ</h1>
+            <p class="fade-in delay-1"><span class="typewriter-text" id="dynamic-text">Café de calidad</span></p>
+            <div class="hero-buttons fade-in delay-2">
+                <a href="#menu" class="btn-primary">Ver Menú</a>
+                <a href="#ubicacion" class="btn-outline">Visítanos</a>
+            </div>
+        </div>
+
+        <div class="scroll-down">
+            <i class="ph ph-arrow-down"></i>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="nosotros" class="about section-padding">
+        <div class="container grid-2">
+            <div class="about-image reveal-left">
+                <img src="assets/images/about_us.png" alt="Interior Prissma Café" loading="lazy">
+            </div>
+            <div class="about-text reveal-right">
+                <h2>Nuestra Historia</h2>
+                <div class="divider"></div>
+                <p>En el corazón de Pucallpa, <strong>PRISSMA CAFÉ</strong> nace con la visión de elevar la cultura
+                    cafetera en nuestra amazonía. No somos solo una cafetería, somos un refugio donde el aroma del café
+                    de especialidad se mezcla con la calidez de nuestra gente.</p>
+                <p>Fusionamos la tradición del mejor grano peruano con un ambiente moderno y sofisticado, diseñado para
+                    inspirar y conectar. Cada taza cuenta una historia, y queremos que tú seas parte de ella.</p>
+                <ul class="features-list">
+                    <li><i class="ph ph-coffee-bean"></i> Grano de especialidad selecto</li>
+                    <li><i class="ph ph-plant"></i> Identidad amazónica sutil</li>
+                    <li><i class="ph ph-armchair"></i> Espacio cómodo y moderno</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Nuestro Menú</h2>
+                <p>Sabores auténticos preparados con pasión</p>
+            </div>
+
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-target="cafes">Cafés</button>
+                <button class="tab-btn" data-target="frios">Fríos</button>
+                <button class="tab-btn" data-target="postres">Postres</button>
+            </div>
+
+            <div class="menu-grid active" id="cafes">
+                <div class="menu-card">
+                    <div class="card-img" style="background-image: url('assets/images/Cappuccino.png')"></div>
+                    <div class="card-info">
+                        <h3>Cappuccino</h3>
+                        <p>Equilibrio perfecto entre espresso, leche y espuma.</p>
+                        <span class="price">S/ 11.00</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-img" style="background-image: url('assets/images/Americano.png')"></div>
+                    <!-- Reusing img -->
+                    <div class="card-info">
+                        <h3>Americano</h3>
+                        <p>Espresso doble diluido en agua caliente.</p>
+                        <span class="price">S/ 8.00</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-img" style="background-image: url('assets/images/Latte_Art.png')"></div>
+                    <div class="card-info">
+                        <h3>Latte Art</h3>
+                        <p>Espresso con leche texturizada y arte latte.</p>
+                        <span class="price">S/ 12.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-grid" id="frios">
+                <div class="menu-card">
+                    <div class="card-img" style="background-image: url('assets/images/Cold_Brew.png')"></div>
+                    <div class="card-info">
+                        <h3>Cold Brew</h3>
+                        <p>Extracción en frío por 18 horas. Intenso y refrescante.</p>
+                        <span class="price">S/ 14.00</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-img" style="background-image: url('assets/images/Iced_Latte.png')"></div>
+                    <div class="card-info">
+                        <h3>Iced Latte</h3>
+                        <p>Nuestra versión clásica en las rocas.</p>
+                        <span class="price">S/ 13.00</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-img" style="background-image: url('assets/images/Frappé_Chocolate.png')"></div>
+                    <div class="card-info">
+                        <h3>Frappé de Chocolate</h3>
+                        <p>Bebida helada con chocolate y crema batida.</p>
+                        <span class="price">S/ 15.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-grid" id="postres">
+                <div class="menu-card">
+                    <div class="card-img" style="background-image: url('assets/images/Cheesecake_Maracuyá.png')"></div>
+                    <div class="card-info">
+                        <h3>Cheesecake de Maracuyá</h3>
+                        <p>Toque tropical amazónico en un clásico cremoso.</p>
+                        <span class="price">S/ 15.00</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-img" style="background-image: url('assets/images/Torta_Chocolate.png')"></div>
+                    <div class="card-info">
+                        <h3>Torta de Chocolate</h3>
+                        <p>Cacao 100% peruano, húmeda y deliciosa.</p>
+                        <span class="price">S/ 12.00</span>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-img" style="background-image: url('assets/images/Brownie_Helado.png')"></div>
+                    <div class="card-info">
+                        <h3>Brownie con Helado</h3>
+                        <p>Brownie caliente con helado de vainilla.</p>
+                        <span class="price">S/ 14.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón Ver Carta Completa -->
+            <div class="menu-download text-center" style="margin-top: 40px;">
+                <a href="menu-carta.html" class="btn-primary">
+                    <i class="ph ph-file-text"></i> Ver Carta Completa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience / Differentials -->
+    <section id="experiencia" class="experience section-padding">
+        <div class="container">
+            <div class="grid-3">
+                <div class="exp-card reveal-up">
+                    <i class="ph ph-medal"></i>
+                    <h3>Calidad Premium</h3>
+                    <p>Seleccionamos los mejores granos de altura para tu taza.</p>
+                </div>
+                <div class="exp-card reveal-up delay-1">
+                    <i class="ph ph-users-three"></i>
+                    <h3>Atención Personalizada</h3>
+                    <p>Baristas expertos listos para recomendarte lo mejor.</p>
+                </div>
+                <div class="exp-card reveal-up delay-2">
+                    <i class="ph ph-wifi-high"></i>
+                    <h3>Coworking Friendly</h3>
+                    <p>WiFi de alta velocidad y enchufes para tu productividad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="galeria" class="gallery">
+        <div class="gallery-grid">
+            <div class="gallery-item" style="background-image: url('assets/images/gallery_1.png')"
+                data-img="assets/images/gallery_1.png" loading="lazy"></div>
+            <div class="gallery-item" style="background-image: url('assets/images/coffee_hot.png')"
+                data-img="assets/images/coffee_hot.png" loading="lazy"></div>
+            <div class="gallery-item" style="background-image: url('assets/images/about_us.png')"
+                data-img="assets/images/about_us.png" loading="lazy"></div>
+            <div class="gallery-item" style="background-image: url('assets/images/gallery_2.png')"
+                data-img="assets/images/gallery_2.png" loading="lazy"></div>
+            <div class="gallery-item" style="background-image: url('assets/images/coffee_cold.png')"
+                data-img="assets/images/coffee_cold.png" loading="lazy"></div>
+            <div class="gallery-item" style="background-image: url('assets/images/dessert.png')"
+                data-img="assets/images/dessert.png" loading="lazy"></div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Imagen ampliada">
+    </div>
+
+    <!-- Testimonios -->
+    <section class="testimonios-section section-padding">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Lo Que Dicen Nuestros Clientes</h2>
+                <p>La experiencia PRISSMA en palabras reales</p>
+            </div>
+
+            <div class="testimonials-carousel">
+                <button class="testimonial-nav testimonial-prev" aria-label="Anterior testimonio">
+                    <i class="ph ph-caret-left"></i>
+                </button>
+
+                <div class="testimonials-container">
+                    <div class="testimonials-track">
+                        <!-- Testimonio 1 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    "El mejor café de Pucallpa sin duda. El ambiente es increíble para trabajar
+                                    y el cheesecake de maracuyá es otro nivel. ¡Volveré siempre!"
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <i class="ph ph-user-circle"></i>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Andrea Rodríguez</h4>
+                                        <p>Cliente Frecuente</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonio 2 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Me encanta la estética del lugar. Es súper 'instagrammable' y la atención es A1.
+                                    Muy recomendado el Cold Brew, es perfecto para el calor de Pucallpa."
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <i class="ph ph-user-circle"></i>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Carlos Mendoza</h4>
+                                        <p>Emprendedor Digital</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonio 3 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Un oasis en la ciudad. Perfecto para desconectar y disfrutar de un buen café.
+                                    La fusión amazónica en los postres es genial. ¡Prissma es mi lugar favorito!"
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <i class="ph ph-user-circle"></i>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Fiorella Pérez</h4>
+                                        <p>Arquitecta</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonio 4 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-rating">
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                    <i class="ph-fill ph-star"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Los baristas son expertos y siempre me recomiendan algo nuevo.
+                                    El café es de calidad premium y el ambiente es perfecto para reuniones de trabajo."
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-avatar">
+                                        <i class="ph ph-user-circle"></i>
+                                    </div>
+                                    <div class="author-info">
+                                        <h4>Miguel Ángel Torres</h4>
+                                        <p>Consultor</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="testimonial-nav testimonial-next" aria-label="Siguiente testimonio">
+                    <i class="ph ph-caret-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section id="ubicacion" class="location section-padding bg-light">
+        <div class="container text-center">
+            <h2>Encuéntranos</h2>
+            <p>El mejor café te espera en Pucallpa</p>
+            <div class="map-container">
+                <!-- Google Maps Embed Filtered for dark aesthetic if possible or just standard -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.237736207676!2d-74.53698102594014!3d-8.378260884481142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a3bd1df28916bb%3A0xb11d179e825333bf!2sPrissma%20Caf%C3%A9!5e0!3m2!1ses-419!2spe!4v1765819454943!5m2!1ses-419!2spe"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="location-details grid-3">
+                <div class="loc-item">
+                    <i class="ph ph-map-pin"></i>
+                    <p>Jr. Atahuallpa N° 123<br>Pucallpa, Perú</p>
+                </div>
+                <div class="loc-item">
+                    <i class="ph ph-clock"></i>
+                    <p>Lun - Sáb: 7:00am - 10:00pm<br>Dom: 8:00am - 9:00pm</p>
+                </div>
+                <div class="loc-item">
+                    <i class="ph ph-phone"></i>
+                    <p>955 678 531<br>reservas@prissmacafe.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contacto" class="contact section-padding">
+        <div class="container grid-2">
+            <div class="contact-info">
+                <h2>Contáctanos</h2>
+                <p>¿Tienes alguna duda o quieres hacer una reserva especial? Escríbenos.</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo</label>
+                        <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+            <div class="contact-image display-none-mobile">
+                <img src="assets/images/hero_bg.png" alt="Contacto Prissma"
+                    style="height: 100%; object-fit: cover; border-radius: 8px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <!-- Column 1: Brand -->
+                <div class="footer-col footer-brand-col">
+                    <h3>PRISSMA<span>CAFÉ</span></h3>
+                    <p class="footer-tagline">Pasión por el café, amor por Pucallpa.</p>
+                    <p class="footer-description">Café de especialidad en el corazón de la Amazonía peruana. Cada taza
+                        cuenta una historia.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/share/1CAvbNNuw1/" target="_blank" aria-label="Facebook">
+                            <i class="ph ph-facebook-logo"></i>
+                        </a>
+                        <a href="https://www.instagram.com/prissmacafe_pucallpa?igsh=MWIwNm5oYzljNXN6" target="_blank"
+                            aria-label="Instagram">
+                            <i class="ph ph-instagram-logo"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@prissmacafe_pucallpa?_r=1&_t=ZS-92FN7lsB6RB" target="_blank"
+                            aria-label="TikTok">
+                            <i class="ph ph-tiktok-logo"></i>
+                        </a>
+                        <a href="https://wa.me/51955678531" target="_blank" aria-label="WhatsApp">
+                            <i class="ph ph-whatsapp-logo"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#nosotros"><i class="ph ph-info"></i> Nosotros</a></li>
+                        <li><a href="#menu"><i class="ph ph-coffee"></i> Menú</a></li>
+                        <li><a href="#experiencia"><i class="ph ph-star"></i> Experiencia</a></li>
+                        <li><a href="#galeria"><i class="ph ph-images"></i> Galería</a></li>
+                        <li><a href="#ubicacion"><i class="ph ph-map-pin"></i> Ubicación</a></li>
+                        <li><a href="#contacto"><i class="ph ph-envelope"></i> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="ph ph-map-pin"></i>
+                            <div>
+                                <strong>Dirección</strong>
+                                <p>Jr. Atahuallpa N° 123<br>Pucallpa, Perú</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ph ph-phone"></i>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <p>955 678 531</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ph ph-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>reservas@prissmacafe.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Hours -->
+                <div class="footer-col">
+                    <h4>Horarios</h4>
+                    <ul class="footer-hours-list">
+                        <li>
+                            <span>Lunes - Sábado</span>
+                            <strong>7:00am - 10:00pm</strong>
+                        </li>
+                        <li>
+                            <span>Domingo</span>
+                            <strong>8:00am - 9:00pm</strong>
+                        </li>
+                    </ul>
+                    <div class="footer-libro">
+                        <a href="reclamaciones.html">
+                            <img src="assets/images/libro-reclamaciones.png" alt="Libro de Reclamaciones">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 PRISSMA CAFÉ. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="terminos.html">Términos y Condiciones</a>
+                    <span>|</span>
+                    <a href="privacidad.html">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/51955678531" class="whatsapp-float" target="_blank">
+        <i class="ph ph-whatsapp-logo"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
+        <i class="ph ph-arrow-up"></i>
+    </button>
+
+    <!-- Cookie Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>🍪 Usamos cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestra <a
+                    href="privacidad.html">Política de Privacidad</a>.</p>
+            <button id="acceptCookies" class="btn-primary">Aceptar</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/global.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
